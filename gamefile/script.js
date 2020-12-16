@@ -9,25 +9,26 @@ window.onload = function () {
     }, 1000);
 
     // for mobile
-    function goleft() {
+    button = document.getElementsByTagName("button");
+    button[0].addEventListener("click", function goleft() {
         dino = document.querySelector('.dino');
         dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
         dino.style.left = (dinoX - 112) + "px";
-    }
+    });
 
-    function gojump() {
+    button[1].addEventListener("click", function gojump() {
         dino = document.querySelector('.dino');
         dino.classList.add('animateDino');
         setTimeout(() => {
             dino.classList.remove('animateDino')
         }, 700);
-    }
+    });
 
-    function goright() {
+    button[2].addEventListener("click", function goright() {
         dino = document.querySelector('.dino');
         dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
         dino.style.left = dinoX + 112 + "px";
-    }
+    });
 
     document.onkeydown = function (e) {
         console.log("Key code is: ", e.keyCode)
