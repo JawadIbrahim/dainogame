@@ -1,4 +1,4 @@
-window.onload = function () {
+
     score = 0;
     cross = true;
 
@@ -98,4 +98,3 @@ window.onload = function () {
     function updateScore(score) {
         scoreCont.innerHTML = "Your Score: " + score
     }
-}
